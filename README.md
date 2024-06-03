@@ -28,6 +28,9 @@ LiveChat is a real-time chat application where users can register, log in, and j
 - **Real-time Communication**: Socket.IO (Node.js)
 - **Database**: MySQL
 
+## Folder Structure
+
+\```
 root/
 ├── app/
 │   ├── controllers/
@@ -39,6 +42,8 @@ root/
 ├── server/
 │   └── bootstrap.php
 └── README.md
+\```
+
 
 
 
@@ -52,7 +57,7 @@ root/
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/livechat.git
+    git clone https://github.com/chisedotdev/livechat.git
     cd livechat
     ```
 
@@ -67,7 +72,7 @@ root/
 
 4. **Set up Tailwind CSS:**
     ```bash
-    npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+    npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch
     ```
 
 5. **Set up Apache server:**
