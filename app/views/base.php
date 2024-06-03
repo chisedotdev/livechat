@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiveChat - <?php echo ucwords($title) ?></title>
     <link rel="stylesheet" href="/css/output.css">
+    <script src="/js/helper.js"></script>
 </head>
 <body class="bg-gray-100">
     <nav class="bg-indigo-600 text-white">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
             <h1 class="text-xl font-bold"><a href="/dashboard">LiveChat</a></h1>
             <ul class="flex space-x-4">
-                <li><a href="/chat-rooms" class="hover:text-gray-300">Chat Rooms</a></li>
+                <li><a href="/rooms" class="hover:text-gray-300">Chat Rooms</a></li>
                 <li><a href="#" class="hover:text-gray-300">Logout</a></li>
             </ul>
         </div>

@@ -1,8 +1,9 @@
 <?php
 
-require_once(__DIR__ . '/../controllers/AuthController.php');
-require_once(__DIR__ . '/../controllers/DashboardController.php');
-require_once(__DIR__ . '/../controllers/ChatController.php');
+require_once(__DIR__ . '/../server/bootstrap.php');
+require_once(__DIR__ . '/../app/controllers/AuthController.php');
+require_once(__DIR__ . '/../app/controllers/DashboardController.php');
+require_once(__DIR__ . '/../app/controllers/ChatController.php');
 
 use Controllers\AuthController;
 use Controllers\DashboardController;
