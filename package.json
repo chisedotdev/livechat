@@ -1,0 +1,18 @@
+{
+  "name": "live-chat-web-app",
+  "version": "1.0.0",
+  "description": "LiveChat Web Application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
