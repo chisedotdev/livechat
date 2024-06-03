@@ -30,15 +30,16 @@ LiveChat is a real-time chat application where users can register, log in, and j
 
 root/
 ├── app/
-│   ├── controllers/        # Contains MVC controllers
-│   ├── models/             # Contains MVC models and database interactions
-│   └── views/              # Contains view templates
-├── public/                 # Contains public-facing files and entry point
-│   └── index.php
-│   └──.htaccess            # Apache configuration file
-├── server/                 # Contains server-related files like bootstrap.php
+│   ├── controllers/
+│   ├── models/
+│   └── views/
+├── public/
+│   ├── index.php
+│   └── .htaccess
+├── server/
 │   └── bootstrap.php
-└── README.md               # Project README file
+└── README.md
+
 
 
 - **app/controllers**: Contains the MVC controllers
