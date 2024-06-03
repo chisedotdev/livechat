@@ -30,8 +30,7 @@ LiveChat is a real-time chat application where users can register, log in, and j
 
 ## Folder Structure
 
-\```
-root/
+```root/
 ├── app/
 │   ├── controllers/
 │   ├── models/
@@ -42,7 +41,7 @@ root/
 ├── server/
 │   └── bootstrap.php
 └── README.md
-\```
+```
 
 
 
