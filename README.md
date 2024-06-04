@@ -10,7 +10,6 @@ LiveChat is a real-time chat application where users can register, log in, and j
 - [Installation](#installation)
 - [Usage](#usage)
 - [Routes](#routes)
-- [Contributing](#contributing)
 - [Future Features](#future-features)
 
 ## Features
@@ -107,14 +106,6 @@ root/
 - `/room/anime` - Anime Chat Room
 - `/room/game` - Game Chat Room
 - `/room/others` - Others Chat Room
-
-## Contributing
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Create a new Pull Request
 
 ## Future Features
 
