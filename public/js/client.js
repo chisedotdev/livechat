@@ -13,7 +13,6 @@ msgForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const msg = htmlspecialchars(msgInput.value);
     if(msg !== '') {
-        // display to your own screen your message
         display_msg(msg);
 
         // get message time sent
