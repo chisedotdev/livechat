@@ -13,7 +13,11 @@
             <h1 class="text-xl font-bold"><a href="/dashboard">LiveChat</a></h1>
             <ul class="flex space-x-4">
                 <li><a href="/rooms" class="hover:text-gray-300">Chat Rooms</a></li>
-                <li><a href="#" class="hover:text-gray-300">Logout</a></li>
+                <li>
+                    <form action="/logout" method="POST">
+                        <button class="text-white hover:text-gray-300 bg-transparent border-none">Logout</button>
+                    </form>
+                </li>
             </ul>
         </div>
     </nav>

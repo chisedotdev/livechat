@@ -5,7 +5,7 @@
             <a href="/room/anime" class="block bg-gray-100 p-4 rounded-lg text-gray-800 hover:bg-gray-200">Anime</a>
         </li>
         <li>
-            <a href="/room/game" class="block bg-gray-100 p-4 rounded-lg text-gray-800 hover:bg-gray-200">Game</a>
+            <a href="/room/games" class="block bg-gray-100 p-4 rounded-lg text-gray-800 hover:bg-gray-200">Game</a>
         </li>
         <li>
             <a href="/room/others" class="block bg-gray-100 p-4 rounded-lg text-gray-800 hover:bg-gray-200">Others</a>

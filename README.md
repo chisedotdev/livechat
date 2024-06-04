@@ -11,6 +11,7 @@ LiveChat is a real-time chat application where users can register, log in, and j
 - [Usage](#usage)
 - [Routes](#routes)
 - [Contributing](#contributing)
+- [Future Features](#future-features)
 
 ## Features
 
@@ -18,7 +19,8 @@ LiveChat is a real-time chat application where users can register, log in, and j
 - Dashboard displaying user information
 - Multiple chat rooms (Anime, Game, Others)
 - Real-time messaging with Socket.IO
-- Persistent message storage
+- Persistent message storage in specific room tables
+- Authentication for restricted access to certain pages
 - Tailwind CSS for styling
 
 ## Technologies Used
@@ -34,6 +36,7 @@ LiveChat is a real-time chat application where users can register, log in, and j
 root/
 ├── app/
 │   ├── controllers/
+│   ├── helpers/
 │   ├── models/
 │   └── views/
 ├── public/
@@ -44,10 +47,8 @@ root/
 └── README.md
 ```
 
-
-
-
 - **app/controllers**: Contains the MVC controllers
+- **app/helpers**: Contains helper functions and utilities used across the application
 - **app/models**: Contains the MVC models and database interactions
 - **app/views**: Contains the view templates
 - **public**: Contains the public-facing files and entry point
@@ -62,8 +63,9 @@ root/
     ```
 
 2. **Set up the database:**
-   - Create a MySQL database named `livechat`.
-   - Update your database credentials in `app/models/Database.php`.
+   - The application will automatically create the `livechat` database and the necessary tables upon first run. 
+   - Ensure your database credentials are correct in `.env.php`.
+
 
 3. **Install Node.js dependencies:**
     ```bash
@@ -97,6 +99,7 @@ root/
 	Open your browser and go to http://localhost.
 
 ## Routes
+
 - `/` - Login Page
 - `/register` - Registration Page
 - `/dashboard` - User Dashboard
@@ -106,8 +109,16 @@ root/
 - `/room/others` - Others Chat Room
 
 ## Contributing
+
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature-branch`)
 3. Commit your changes (`git commit -am 'Add new feature'`)
 4. Push to the branch (`git push origin feature-branch`)
 5. Create a new Pull Request
+
+## Future Features
+
+- Ability to change username, email, and password
+- Ability to upload a profile picture
+- Auto-deletion of chat room messages when the room is empty
+- Dashboard will be fully functional in future updates

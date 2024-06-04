@@ -2,6 +2,8 @@
 
 namespace Models;
 
+require_once(__DIR__ . '/../../.env.php');
+
 use PDO;
 use PDOException;
 
@@ -17,12 +19,10 @@ class Database
     {
         if (!isset(self::$pdo)) {
             try {
-                self::$pdo = new PDO('mysql:host=localhost', 'root', 'root');
-                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                self::$pdo->exec('create database if not exists livechat');
-
-                self::$pdo = new PDO('mysql:host=localhost;dbname=livechat', 'root', 'root');
+                // Use the variables from the .env.php file
+                global $host, $username, $password, $db;
+                
+                self::$pdo = new PDO('mysql:host=' . $host . ';dbname=' . $db, $username, $password);
                 self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 self::$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
@@ -32,6 +32,26 @@ class Database
         return self::$pdo;
     }
 
+    public static function createDatabase()
+    {
+        try {
+            // Use the variables from the .env.php file
+            global $host, $username, $password, $db;
+
+            // Establish connection without selecting database
+            $pdo = new PDO('mysql:host=' . $host, $username, $password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+            // Create database if it doesn't exist
+            $pdo->exec('create database if not exists ' . $db);
+        
+            // Close connection
+            $pdo = null;
+        } catch ( PDOException $e ) {
+            exit("Error creating database: " . $e->getMessage());
+        }
+    }
+    
     public static function createTables()
     {
         $pdo = self::getInstance();
@@ -58,7 +78,7 @@ class Database
             ");
 
             $pdo->exec("
-            create table if not exists game_room (
+            create table if not exists games_room (
                 id int auto_increment primary key,
                 username varchar(100) not null,
                 message text not null,
@@ -75,7 +95,7 @@ class Database
             )
             ");
         } catch ( PDOException $e ) {
-            echo "Error creating tables: " . $e->getMessage();
+            exit("Error creating tables: " . $e->getMessage());
         }
     }
 }

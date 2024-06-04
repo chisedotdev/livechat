@@ -3,6 +3,9 @@
 namespace Controllers;
 
 require_once('BaseController.php');
+require_once(__DIR__ . '/../models/Message.php');
+
+use Models\Message;
 
 class ChatController extends BaseController
 {
@@ -14,19 +17,27 @@ class ChatController extends BaseController
         ]);
     }
 
-    public function showRoom($room)
+    public function showRoom($room, $msgs)
     {
         $this->render('base',[
             "content" => "chat/room",
             "title" => $room,
             "opt" => [
                 'room' => $room
-            ]
+            ],
+            "msgs" => $msgs
         ]);
     }
 
-    public function sendMessage()
+    public function getAllMessages($room)
     {
-        // nothing here yet
+        $msg = new Message();
+        return $msg->getAllMessages($room);
+    }
+
+    public function saveMessage($data)
+    {
+        $msg = new Message();
+        return $msg->saveMessage($data['_username'], $data['_msg'], $data['_time'], $data['_room']);
     }
 }
