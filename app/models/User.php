@@ -42,7 +42,7 @@ class User
         $_username = $stmt->fetch();
 
         if ( $_email === false && $_username === false ) {
-            return false;
+            return true;
         }
         
         if ( $_email !== false && $_email['email'] === $email ) {

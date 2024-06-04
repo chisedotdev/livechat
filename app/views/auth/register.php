@@ -22,7 +22,7 @@
                     <!-- Error Message -->
                     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
                         <strong class="font-bold">Oh snap!</strong>
-                        <span class="block sm:inline"><?php echo $msg ?><</span>
+                        <span class="block sm:inline"><?php echo $msg ?></span>
                     </div>
                 <?php endif; ?>
             <?php endif; ?>
